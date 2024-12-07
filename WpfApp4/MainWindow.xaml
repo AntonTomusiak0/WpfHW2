@@ -1,0 +1,124 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600
+        " Width="800"
+        Background="#242424">
+    <Window.Resources>
+        <Style x:Key="CommonText" TargetType="Label">
+            <Setter Property="Foreground" Value="#E4E4E4"/>
+        </Style>
+        <Style x:Key="CommonInput" TargetType="TextBox">
+            <Setter Property="Background" Value="#383838"/>
+            <Setter Property="Foreground" Value="#D6D6D6"/>
+            <Setter Property="BorderThickness" Value="0.5"/>
+            <Setter Property="Padding" Value="10 2 5 2"/>
+        </Style>
+        <Style x:Key="LeftMenuItem" TargetType="StackPanel">
+            <Setter Property="Margin" Value="5 5 5 5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Width" Value= "450"/>
+        </Style>
+        <Style x:Key="RightMenuItem" TargetType="StackPanel">
+            <Setter Property="Background" Value="#383838"/>
+            <Setter Property="Height" Value="75"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="0 0 0 15"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Label
+            Style="{StaticResource CommonText}"
+            FontSize="28"
+            FontWeight="SemiBold"
+            >Visual Studio 2022</Label>
+        <Label
+            Style="{StaticResource CommonText}"
+            FontSize="20"
+            FontWeight="SemiBold"
+            >Open recent</Label>
+        <TextBox
+            Style="{StaticResource CommonInput}"
+            Width="180"
+            HorizontalAlignment="Left"
+            Text="Search recent (Alt + S)">
+        </TextBox>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <StackPanel Style="{StaticResource LeftMenuItem}">
+                    <Image Source="images/C#.png" Width="30" />
+                    <Label Style="{StaticResource CommonText}">LessonProject4.sln</Label>
+                    <Label
+                        Style="{StaticResource CommonText}"
+                        Margin="200 0 0 0"
+                           >29.11.2024 19:01</Label>
+                </StackPanel>
+                <StackPanel Style="{StaticResource LeftMenuItem}">
+                    <Image Source="images/C#.png" Width="30" />
+                    <Label Style="{StaticResource CommonText}">LessonProject3.sln</Label>
+                    <Label
+        Style="{StaticResource CommonText}"
+        Margin="200 0 0 0"
+           >25.11.2024 17:34</Label>
+                </StackPanel>
+                <StackPanel Style="{StaticResource LeftMenuItem}">
+                    <Image Source="images/C#.png" Width="30" />
+                    <Label Style="{StaticResource CommonText}">LessonProject2.sln</Label>
+                    <Label
+Style="{StaticResource CommonText}"
+Margin="200 0 0 0"
+   >24.11.2024 20:55</Label>
+                </StackPanel>
+                <StackPanel Style="{StaticResource LeftMenuItem}">
+                    <Image Source="images/C#.png" Width="30" />
+                    <Label Style="{StaticResource CommonText}">LessonProject1.sln</Label>
+                    <Label
+Style="{StaticResource CommonText}"
+Margin="200 0 0 0"
+   >23.11.2024 18:26</Label>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Width="350">
+                <Label Style="{StaticResource CommonText}" FontSize="20">Get started</Label>
+                <StackPanel Style="{StaticResource RightMenuItem}">
+                    <Image Source="images/C#.png" Width="60" />
+                    <Label Style="{StaticResource CommonText}" 
+                           VerticalAlignment="Center"
+                           FontSize="24"
+                           >Clone a repository</Label>
+                </StackPanel>
+                
+                <StackPanel Style="{StaticResource RightMenuItem}">
+                    <Image Source="images/C#.png" Width="60" />
+                    <Label Style="{StaticResource CommonText}" 
+                           VerticalAlignment="Center"
+                           FontSize="24"
+                           >Open a project or solution</Label>
+                </StackPanel>
+
+                <StackPanel Style="{StaticResource RightMenuItem}">
+                    <Image Source="images/C#.png" Width="60" />
+                    <Label Style="{StaticResource CommonText}" 
+           VerticalAlignment="Center"
+           FontSize="24"
+           >Open a local folder</Label>
+                </StackPanel>
+                <StackPanel Style="{StaticResource RightMenuItem}">
+                    <Image Source="images/C#.png" Width="60" />
+                    <Label Style="{StaticResource CommonText}" 
+           VerticalAlignment="Center"
+           FontSize="24"
+           >Create a new project</Label>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>
